@@ -1,26 +1,71 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+tree files
 
-## How to use this template
-
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
-
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
-```
-
-Then, to run it, cd into `myTabs` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+  index.html
+│  manifest.json
+│  service-worker.js
+│
+├─app
+│      app.component.ts
+│      app.html
+│      app.module.ts
+│      app.scss
+│      app.service.ts
+│      main.ts
+│
+├─assets
+│  └─icon
+│          favicon.ico
+│          iconfont.css
+│          iconfont.eot
+│          iconfont.js
+│          iconfont.svg
+│          iconfont.ttf
+│          iconfont.woff
+│
+├─components
+│  │  components.module.ts
+│  │
+│  └─ion-products
+│          ion-products.html
+│          ion-products.scss
+│          ion-products.ts
+│
+├─pages
+│  ├─about
+│  │      about.html
+│  │      about.module.ts
+│  │      about.scss
+│  │      about.ts
+│  │
+│  ├─contact
+│  │      contact.html
+│  │      contact.module.ts
+│  │      contact.scss
+│  │      contact.ts
+│  │
+│  ├─home
+│  │      home.html
+│  │      home.module.ts
+│  │      home.scss
+│  │      home.ts
+│  │
+│  ├─product-details
+│  │      product-details.html
+│  │      product-details.module.ts
+│  │      product-details.scss
+│  │      product-details.ts
+│  │
+│  ├─product-list
+│  │      product-list.html
+│  │      product-list.module.ts
+│  │      product-list.scss
+│  │      product-list.ts
+│  │
+│  └─tabs
+│          tabs.html
+│          tabs.module.ts
+│          tabs.scss
+│          tabs.ts
+│
+└─theme
+        variables.scss
