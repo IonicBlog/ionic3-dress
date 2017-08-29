@@ -1,0 +1,41 @@
+page-product-details {
+  ion-col {
+    padding: 0px;
+  }
+  .item-good .list-price {
+    width: 96%;
+    height: 34px;
+    line-height: 35px;
+    bottom: 0;
+    padding: 2% 0;
+  }
+  .list-price .ml {
+    color: #f8285c;
+    margin-left: 27%;
+  }
+  .item-good h1 {
+    width: 96%;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(102, 102, 102, 1);
+    padding: 2%;
+    text-align: center;
+  }
+  .item-good .list-price .f14 {
+    font-size: 14px;
+  }
+  .item-good .list-price i {
+    font-style: normal;
+    font-size: 30px;
+  }
+  .item-good .price-new {
+    font-size: 30px;
+  }
+  .list-price .ml2 {
+    margin-left: 2%;
+  }
+  .item-good .del {
+    color: rgba(171, 171, 171, 1);
+    text-decoration: line-through;
+  }
+}

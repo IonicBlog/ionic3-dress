@@ -1,0 +1,51 @@
+page-contact {
+  background: #efefef;
+  .menus {
+    height: 100%;
+    ion-scroll {
+      background-color: #efefef;
+    }
+  }
+  .items {
+    height: 100%;
+    ion-scroll {
+      background-color: #fff;
+    }
+  }
+  ion-grid {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    ion-row {
+      padding: 0px;
+      margin: 0px;
+      height: 100%;
+      ion-col {
+        padding: 0px;
+        margin: 0px;
+      }
+    }
+  }
+  ion-list {
+    ion-item {
+      background: #efefef;
+    }
+  }
+  .product {
+    .scroll-content {
+      margin-bottom: 0px;
+    }
+  }
+  .menus {
+    .active {
+      background: #fff;
+    }
+    ion-item {
+      background: #efefef;
+      ion-label {
+        font-family: "黑体";
+        font-size: 90%;
+      }
+    }
+  }
+}

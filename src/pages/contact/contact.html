@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar style="opacity: 0.8" no-border-bottom color="primary">
+    <ion-title>优惠精选</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col col-3 class="menus">
+        <ion-scroll scrollY="true" style="height:100%">
+          <ion-list no-lines>
+            <ion-item button class="menuItem" *ngFor="let c of categories;let i=index" [ngClass]="{'active': i==0}" text-center (click)="itemClick(c,$event)">
+              {{c.FavoritesTitle}} </ion-item>
+          </ion-list>
+        </ion-scroll>
+      </ion-col>
+      <ion-col class="items">
+        <ion-scroll scrollY="true" #scroll style="height:100%">
+          <ion-products [products]="products"></ion-products>
+          <ion-row>
+            <ion-col class="nodata" text-center *ngIf="!hasmore">
+              没有商品啦 ♪(^∇^*)
+            </ion-col>
+          </ion-row>
+          <ion-row #spinner *ngIf="hasmore">
+            <ion-col text-center>
+              <ion-spinner></ion-spinner>
+            </ion-col>
+          </ion-row>
+        </ion-scroll>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
