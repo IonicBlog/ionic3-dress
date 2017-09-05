@@ -1,6 +1,8 @@
+import { AppShare } from './../../app/app.share';
 import { AppService, AppGlobal } from './../../app/app.service';
 import { Component } from '@angular/core';
-import { NavController, IonicPage } from 'ionic-angular';
+import { NavController, IonicPage, ActionSheetController, LoadingController } from 'ionic-angular';
+
 
 @IonicPage()
 @Component({
@@ -21,7 +23,7 @@ export class HomePage {
     pageSize: 20
   }
 
-  constructor(public appService: AppService, public navCtrl: NavController) {
+  constructor(public appShare:AppShare,public loadingCtrl: LoadingController, public actionSheetCtrl: ActionSheetController, public appService: AppService, public navCtrl: NavController) {
     this.getSlides();
     this.getCategories();
     this.getProducts();
@@ -61,4 +63,48 @@ export class HomePage {
   goProductList(item) {
     this.navCtrl.push('ProductListPage', { item: item });
   }
+
+
+
+  share(event) {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: '分享',
+      buttons: [
+        {
+          text: 'QQ好友',
+          handler: () => {
+            this.appShare.qqShare(0)
+          }
+        },
+        {
+          text: 'QQ空间',
+          handler: () => {
+            this.appShare.qqShare(1)
+          }
+        },
+        {
+          text: '微信好友',
+          handler: () => {
+            this.appShare.wxShare(0)
+          }
+        },
+        {
+          text: '朋友圈',
+          handler: () => {
+            this.appShare.wxShare(1)
+          }
+        },
+        {
+          text: '取消',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+
+    actionSheet.present();
+  }
+
 }

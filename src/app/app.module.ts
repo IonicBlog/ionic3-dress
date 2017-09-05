@@ -1,3 +1,4 @@
+import { AppShare } from './app.share';
 import { HttpModule } from '@angular/http';
 import { AppService } from './app.service';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -22,7 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   providers: [
     StatusBar,
-    SplashScreen, AppService,
+    SplashScreen, AppService,AppShare,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
