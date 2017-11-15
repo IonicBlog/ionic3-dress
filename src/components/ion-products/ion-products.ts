@@ -1,6 +1,5 @@
 import { NavController } from 'ionic-angular';
 import { Component, Input } from '@angular/core';
-import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'ion-products',
